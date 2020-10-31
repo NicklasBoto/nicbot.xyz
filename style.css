@@ -7,16 +7,11 @@ body, html {
   height: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .bg-image {
   background-image: url("code.png");
 
   /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  filter: none;
 
   /* Full height */
   height: 100%;
@@ -27,13 +22,11 @@ body, html {
   background-size: cover;
 }
 
-.center {
+.bg-image::after {
+  content: "";
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-img {
- width: 20em; 
+  height: 100%;
+  background-image: url("lambdapurple.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
